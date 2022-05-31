@@ -54,7 +54,6 @@ int mobile(int m, int pin)
             {
                 printf("\nIncorrect pin");
                 fflush(stdin);
-                getch();
                 exit(0);
             }
         }
@@ -81,7 +80,6 @@ int mobile(int m, int pin)
             else
             {
                 printf("\nIncorrect pin");
-                getch();
                 exit(0);
             }
         }
@@ -108,7 +106,6 @@ int mobile(int m, int pin)
             else
             {
                 printf("\nIncorrect pin");
-                getch();
                 exit(0);
             }
         }
@@ -117,7 +114,6 @@ int mobile(int m, int pin)
 
     default:
         printf("Incorrect Mobile No. Try again!!!");
-        getch();
         exit(0);
         break;
     }
@@ -125,45 +121,9 @@ int mobile(int m, int pin)
     return (m);
 }
 
-/*
-int cus1(int pin)
-{
-    int m;
-    printf("\nEnter Pin Your No=");
-    scanf("%d",&pin);
-
-
-
-   if (m==2338 && pin==1234)
-    {
-        printf("\nPin is verified");
-    }
-
-    else
-    {
-        printf("\nIncorrect pin");
-        exit(0);
-    }
-
-    if (m==9044 && pin==4321)
-    {
-        printf("\nPin is verified");
-    }
-
-    else
-    {
-        printf("\nIncorrect pin");
-        exit(0);
-    }
-
-
-    return (pin);
-}
- */
-
 int option(int opt, int am, int cb, int q)
 {
-    int  amount, bal = 500, que;
+    int  amount, bal = 500, que,link;
 
     FILE *ptr = NULL;
 
@@ -202,8 +162,8 @@ int option(int opt, int am, int cb, int q)
             printf("\n\nPlease collect your card!!!");
             printf("\nPlease collect your cash!!!");
             printf("\n\nCurrent Balance=%d", bal);
-            getch();
-            exit(0);
+        
+         
         }
 
         if (opt == 2)
@@ -225,8 +185,7 @@ int option(int opt, int am, int cb, int q)
             printf("\nCurrent Balance=%d", bal);
             printf("\nPlease collect your card!!!");
             printf("\n\nThank your for using DPatel'S ATM... Visit again");
-            getch();
-            exit(0);
+        
 
         }
 
@@ -250,72 +209,20 @@ int option(int opt, int am, int cb, int q)
 
     } while (que == 0);
 
+    printf("\n\n***** Press 1 to visit itechdp github profile by Dhrumil Patel *****");
+    printf("\nYour choice:");
+    scanf("%d", &link);
+    if (link == 1)
+    {
+        system("start https://www.github.com/itechdp");
+        exit(0);
+    }
+
+    else
+    {
+        exit(0);
+    }
+
     return (opt);
 }
 
-/*  do
- {
-     printf("\n\nDPatel Atm\ntranstation Menu");
-     printf("\n\n1.Withdhrawl");
-     printf("\n2.Deposit Cash");
-     printf("\n3.Check balance");
-     printf("\n4.Branch Info");
-     printf("\nYour Choice:");
-     scanf("%d",&opt);
-
-     switch (opt)
-     {
-     case 1:
-         printf("Enter amount=");
-         scanf("%d",&amount);
-
-         if (bal<=0)
-         {
-             printf("\nYou have insufficient balance");
-             exit(0);
-         }
-
-
-
-         printf("\nWait while your transation is been processed");
-
-         bal=bal-amount;
-
-         printf("\n\nPlease collect your card!!!");
-         printf("\nPlease collect your cash!!!");
-         printf("\n\nCurrent Balance=%d",bal);
-         exit(0);
-
-         break;
-
-     case 2:
-         printf("Enter your cash amount=");
-         scanf("%d",&amount);
-
-         // fflush(stdin);
-
-         bal=bal+amount;
-
-
-         printf("\nYou deposit=%d",amount);
-         printf("\nCurrent Balance=%d",bal);
-         printf("\nPlease collect your card!!!");
-         printf("\n\nThank your for using DPatel'S ATM... Visit again");
-         exit(0);
-         break;
-
-
-     case 3:
-         printf("\n\nYour current balance=%d",bal);
-
-         printf("\n\n0.Back to transtation menu");
-         printf("\n1.exit");
-         printf("\nYour choice:");
-         scanf("%d",&que);
-
-         printf("\n\nThank your for using DPatel'S ATM... Visit again");
-
-         break;
-
-     }
- } while (que==0); */

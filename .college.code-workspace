@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\Website"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cmath": "c"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "Website"
+	}
+}
