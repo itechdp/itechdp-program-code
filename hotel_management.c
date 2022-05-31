@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 void hname();
 void no_person(int no_per);
@@ -1069,7 +1070,8 @@ int que_ans(char x)
 
     else
     {
-        printf("\nNo worries!!! now your food is ready");
+        printf("\nNo worries!!! Your food will prepare soon");
+        sleep(5);
         printf("\nEnjoy meal!!!");
     }
 }
@@ -1077,7 +1079,7 @@ int que_ans(char x)
 int billing(int b)
 {
 
-    int service_charge = 100, gst = 18, grand_total = 0;
+    int service_charge = 100, gst = 18, grand_total = 0, link;
     printf("\n\n********** Billing Counter **********");
     printf("\n\nHow was the dinner?");
     printf("\nAwsome(A) Not as expected(N)");
@@ -1103,6 +1105,19 @@ int billing(int b)
     printf("\nGrand Total    :%d", grand_total);
 
     printf("\n********** Thank Your Visit Again!!! **********");
+    printf("\n\n***** Press 1 to visit itechdp github profile by Dhrumil Patel *****");
+    printf("\nYour choice:");
+    scanf("%d", &link);
+    if (link == 1)
+    {
+        system("start https://www.github.com/itechdp");
+    }
+
+    else
+    {
+        exit(0);
+    }
+
     return grand_total;
 }
 

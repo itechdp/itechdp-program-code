@@ -21,5 +21,5 @@ int main()
 
     printf("\nThe distance between first point to last point is:%d", distance);
 
-    return 0;
+    return 0 ;
 }

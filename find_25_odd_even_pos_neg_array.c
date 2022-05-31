@@ -1,3 +1,8 @@
+/* 
+Twenty-five numbers are entered from the keyboard into an array. write a progarm to find out how many of them are positive,how many are negative,
+how many are even and how many are odd.
+*/
+
 #include <stdio.h>
 
 int main()
